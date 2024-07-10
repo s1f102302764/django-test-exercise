@@ -22,7 +22,7 @@ class TaskModelTestCase(TestCase):
         self.assertEqual(task.title, 'task1')
         self.assertFalse(task.completed)
         self.assertEqual(task.due_at, due)
-        
+  
     def test_create_task2(self):
         task = Task(title='task2')
         task.save()
@@ -47,7 +47,6 @@ class TaskModelTestCase(TestCase):
         task.save()
 
         self.assertTrue(task.is_overdue(current))
-
 
     def test_is_overdue_none(self):
         due = None
